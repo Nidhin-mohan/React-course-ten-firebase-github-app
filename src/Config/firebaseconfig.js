@@ -1,6 +1,6 @@
 
 
-import * as firebase from 'firebase';
+import  firebase from 'firebase';
 
 let config = {
    apiKey: "AIzaSyBmYOWBBgiiqEWq3_xRP4VlNoQJyLbojrw",

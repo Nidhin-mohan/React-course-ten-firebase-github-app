@@ -16,16 +16,14 @@ import { useContext, useState } from 'react';
 import { UserContext } from './Context/UserContext';
 import Footer from './layout/Footer';
 import Header from './layout/Header';
-import firebaseConfig from "./Config/firebaseconfig"
+import firebase from "./Config/firebaseconfig"
 
 
 
-
-//init firebase
 
   
 
-   firebase.initializeApp(firebaseConfig);
+
 
 
  const App = () => {
