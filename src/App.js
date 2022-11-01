@@ -18,10 +18,14 @@ import Footer from './layout/Footer';
 import Header from './layout/Header';
 import firebaseConfig from "./Config/firebaseconfig"
 
+
+
+
 //init firebase
 
-    firebase.initializeApp(firebaseConfig);
+  
 
+   firebase.initializeApp(firebaseConfig);
 
 
  const App = () => {
