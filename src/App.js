@@ -12,14 +12,21 @@ import Home from './pages/Home';
 import Signin from './pages/SignIn';
 import Signup from './pages/Signup';
 import PageNotFound from './pages/PageNotFound';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from './Context/UserContext';
+import Footer from './layout/Footer';
+import Header from './layout/Header';
+import firebaseConfig from "./Config/firebaseconfig"
+
+//init firebase
+
+    firebase.initializeApp(firebaseConfig);
 
 
 
  const App = () => {
 
-const [user, setUser] = useContext(null);
+const [user, setUser] = useState(null);
 
 
 return (
@@ -27,14 +34,16 @@ return (
     <ToastContainer />
 
     
-      {/* <UserContext.Provider value={{ user, setUser }}> */}
+      <UserContext.Provider value={{ user, setUser }}>
+        <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-      {/* </UserContext.Provider> */}
+        <Footer/>
+      </UserContext.Provider>
   
   </div>
 );
